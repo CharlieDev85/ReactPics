@@ -7,18 +7,17 @@ class SearchBar extends React.Component{
         console.log(event.target.value);
     }
 
-    onInputClick(event){
-        console.log("input was clicked");
-    }
 
-    //we don't place "()" for event changes
+
+    //alternate way to handle events
+    //using an arrow function inside jsx
     render(){
         return (
             <div className="ui segment">
                 <form className="ui form">
                     <div className="field">
                         <label>Image Search</label>
-                        <input type="text" onChange={this.onInputChange} onClick={this.onInputClick}/>
+                        <input type="text" onChange={(e)=>console.log(e.target.value)} />
                     </div>
                 </form>
             </div>
