@@ -1,11 +1,13 @@
 import React from 'react';
+//npm install --save axios
 
 class SearchBar extends React.Component{
     state = {term: "hi there!"}
 
     onFormSubmit = (event) => {
         event.preventDefault();
-        console.log(this.state.term);
+        this.props.runMeWhenUserSubmits(this.state.term);
+        //console.log(this.state.term);
     }
 
     render(){
